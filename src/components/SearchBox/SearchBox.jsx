@@ -1,4 +1,4 @@
-import "../css/SearchBox.css"
+import styles from "./SearchBox..module.css"
 
 export default function SearchBox({inputValue, setInputValue}) {
     const handleChange = (evt) => {
@@ -6,7 +6,7 @@ export default function SearchBox({inputValue, setInputValue}) {
     };
 
     return(
-        <div className="search-form">
+        <div className={styles.searchForm}>
             <label>Find contacts by name</label>
             <input  type="text" value={inputValue} onChange={handleChange}/>
         </div>

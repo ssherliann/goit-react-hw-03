@@ -1,9 +1,9 @@
-import Contact from './Contact';
-import "../css/ContactList.css"
+import Contact from '../Contact/Contact';
+import styles from "./ContactList.module.css"
 
 export default function ContactList({ filteredContacts, deleteContact }) {
     return (
-    <div className='contactlist-container'>
+    <div className={styles.contactListContainer}>
         {filteredContacts.map(({ id, name, number }) => (
         <Contact key={id} id={id} name={name} number={number} deleteContact={deleteContact}/>
         ))}
